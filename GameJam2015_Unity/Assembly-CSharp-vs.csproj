@@ -56,6 +56,8 @@
      <Compile Include="Assets\Scripts\RendererExtensions.cs" />
      <Compile Include="Assets\Scripts\Ruvolo_TestScript.cs" />
      <Compile Include="Assets\Scripts\VersionTestScript.cs" />
+     <Compile Include="Assets\Scripts\XMovement.cs" />
+     <Compile Include="Assets\Scripts\YMovement.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>
