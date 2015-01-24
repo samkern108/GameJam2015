@@ -5,7 +5,7 @@ using UnityEngine;
 /// <summary>
 /// Parallax scrolling script that should be assigned to a layer
 /// </summary>
-public class BackgroundScroll : MonoBehaviour
+public class ObjectScroll : MonoBehaviour
 {
 	/// <summary>
 	/// Scrolling speed
@@ -112,27 +112,6 @@ public class BackgroundScroll : MonoBehaviour
 						// of the backgroundPart list.
 						backgroundPart.Remove(firstChild);
 						backgroundPart.Add(firstChild);
-					}
-				}
-				
-				if (firstChild.position.y < Camera.main.transform.position.y)
-				{
-					if (firstChild.renderer.IsVisibleFrom(Camera.main) == false)
-					{
-						// Get the last child position.
-						Transform lastChild = backgroundPart.LastOrDefault();
-						Vector3 lastPosition = lastChild.transform.position;
-						Vector3 lastSize = (lastChild.renderer.bounds.max - lastChild.renderer.bounds.min);
-						
-						// Set the position of the recyled one to be AFTER
-						// the last child.
-						// Note: Only work for horizontal scrolling currently.
-						
-						
-						foreach(Transform t in backgroundPart)
-						{
-							t.position = new Vector3(t.position.x, t.position.y, t.position.z);
-						}
 					}
 				}
 			}

@@ -15,7 +15,6 @@ public class AimedShoot : MonoBehaviour {
 			
 			Vector3 sp = Camera.main.WorldToScreenPoint(transform.position);
 			Vector3 dir = (Input.mousePosition - sp).normalized;
-			Debug.Log (dir + " , " + dir*amount);
 			p.rigidbody2D.AddForce(dir * amount);	
 			
 			var angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
