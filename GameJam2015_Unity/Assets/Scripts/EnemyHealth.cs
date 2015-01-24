@@ -7,15 +7,33 @@ public class EnemyHealth : MonoBehaviour
 {
 	public int hp = 1;
 	
+	int hitPoints;
+	
+	void Start(){
+		gameObject.SetActive(false);
+	}
+	
+	void OnEnable(){
+		hitPoints = hp;
+	}
+	
 	
 	public void Damage(int damageCount)
 	{
-		hp -= damageCount;
+		hitPoints -= damageCount;
 		
-		if (hp <= 0)
+		if (hitPoints <= 0)
 		{
-			Destroy(gameObject);
+			Invoke("Destroy", .01f);
 		}
+	}
+	
+	void Destroy(){
+		gameObject.SetActive(false);
+	}
+	
+	void OnDisable(){
+		CancelInvoke();
 	}
 	
 	void OnTriggerEnter2D(Collider2D otherCollider)

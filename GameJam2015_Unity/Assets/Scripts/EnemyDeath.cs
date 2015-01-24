@@ -5,7 +5,10 @@ using System.Collections;
 
 public class EnemyDeath : MonoBehaviour {
 
+	public int hp = 1;
+
 	void OnEnable(){
+		hp = 1;
 		Invoke("Destroy", 2f);
 	}
 	
