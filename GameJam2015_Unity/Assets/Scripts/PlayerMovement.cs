@@ -16,6 +16,30 @@ public class PlayerMovement : MonoBehaviour
 			speed.y * inputY);
 	}
 	
+	void OnCollisionEnter2D(Collision2D collision)
+	{
+		bool damagePlayer = false;
+		
+		// Collision with enemy
+		EnemyHealth enemy = collision.gameObject.GetComponent<EnemyHealth>();
+		if (enemy != null)
+		{
+			// Kill the enemy
+			EnemyHealth enemyHealth = enemy.GetComponent<EnemyHealth>();
+			if (enemyHealth != null) enemyHealth.Damage(enemyHealth.hp);
+			
+			damagePlayer = true;
+		}
+		
+		// Damage the player
+		if (damagePlayer)
+		{
+			PlayerHealth playerHealth = this.GetComponent<PlayerHealth>();
+			if (playerHealth != null) 
+				playerHealth.Damage(1);
+		}
+	}
+	
 	void FixedUpdate()
 	{
 		rigidbody2D.velocity = movement;

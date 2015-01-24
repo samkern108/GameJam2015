@@ -45,8 +45,6 @@ public class BackgroundScroll : MonoBehaviour
 			{
 				Transform child = transform.GetChild(i);
 				
-				Debug.Log (child.position.x);
-				
 				// Add only the visible children
 				if (child.renderer != null)
 				{

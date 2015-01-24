@@ -46,10 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Movement.cs" />
-     <Compile Include="Assets\RendererExtensions.cs" />
      <Compile Include="Assets\Scripts\BackgroundScroll.cs" />
+     <Compile Include="Assets\Scripts\EnemyFire.cs" />
+     <Compile Include="Assets\Scripts\EnemyHealth.cs" />
+     <Compile Include="Assets\Scripts\Movement.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\RendererExtensions.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity - 4.6/Unity-4.6.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
  </Reference>
