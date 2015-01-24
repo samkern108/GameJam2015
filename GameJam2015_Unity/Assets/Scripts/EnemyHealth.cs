@@ -20,18 +20,14 @@ public class EnemyHealth : MonoBehaviour
 	
 	void OnTriggerEnter2D(Collider2D otherCollider)
 	{
-		/*// Is this a shot?
-		ShotScript shot = otherCollider.gameObject.GetComponent<ShotScript>();
+		// Is this a shot?
+		PlayerProjectile shot = otherCollider.gameObject.GetComponent<PlayerProjectile>();
 		if (shot != null)
 		{
-			// Avoid friendly fire
-			if (shot.isEnemyShot != isEnemy)
-			{
-				Damage(shot.damage);
+			Damage(shot.damage);
 				
-				// Destroy the shot
-				Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
-			}
-		}*/
+			// Destroy the shot
+			Destroy(shot.gameObject); // Remember to always target the game object, otherwise you will just remove the script
+		}
 	}
 }
