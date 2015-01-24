@@ -46,6 +46,9 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Movement.cs" />
+     <Compile Include="Assets\RendererExtensions.cs" />
+     <Compile Include="Assets\Scripts\BackgroundScroll.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity - 4.6/Unity-4.6.app/Contents/UnityExtensions/Unity/GUISystem/4.6.0/UnityEngine.UI.dll</HintPath>
